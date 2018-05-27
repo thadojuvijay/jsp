@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>Jsp_9_Implicit_Objects</display-name>
+  <context-param>
+    <param-name>name</param-name>
+    <param-value>vijay</param-value>
+  </context-param>
+  <context-param>
+    <param-name>eno</param-name>
+    <param-value>12</param-value>
+  </context-param>
+  
+  <servlet>
+    <servlet-name>servletconfig</servlet-name>
+    <jsp-file>/Config.jsp</jsp-file>
+    <init-param>
+      <param-name>database</param-name>
+      <param-value>oracle.jdbc.driver.OracleDriver</param-value>
+    </init-param>
+  </servlet>
+  
+  
+  <servlet>
+    <servlet-name>servletcontext</servlet-name>
+    <jsp-file>/Jsp_Application.jsp</jsp-file>
+  </servlet>
+  
+  
+  <servlet-mapping>
+    <servlet-name>servletcontext</servlet-name>
+    <url-pattern>/Jsp_Application</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>servletconfig</servlet-name>
+    <url-pattern>/config</url-pattern>
+  </servlet-mapping>
+  
+  
+  <context-param>
+    <param-name>acessentireApplication</param-name>
+    <param-value>everywhere</param-value>
+  </context-param>
+
+  
+  
+  
+  <servlet>
+    <display-name>Servlet_PageContext</display-name>
+    <servlet-name>Servlet_PageContext</servlet-name>
+    <servlet-class>com.developer.Servlet_PageContext</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Servlet_PageContext</servlet-name>
+    <url-pattern>/Servlet_PageContext</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+ 
+
+</web-app>
